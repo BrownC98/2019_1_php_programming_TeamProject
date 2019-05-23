@@ -13,7 +13,8 @@
                 <li class="nav-item"><a class="nav-link" href="hosting.html">Hosting</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get started</span></a></li>
+                <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Log in</span></a></li>
+
             </ul>
         </div>
     </div>
