@@ -13,7 +13,16 @@
                 <li class="nav-item"><a class="nav-link" href="hosting.html">Hosting</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Log in</span></a></li>
+                
+                <?php
+                if($_SESSION[id]) {
+                    // Login state
+                    echo "<li><a id=\"logout\" href=\"function/logout.php\">Logout</a></li>";
+                } else {
+                    // Logout state
+                    echo "<li class=\"nav-item cta\"><a href=\"#\" class=\"nav-link\" id=\"login\"><span>Log in</span></a></li>";
+                }
+                ?>
 
             </ul>
         </div>
