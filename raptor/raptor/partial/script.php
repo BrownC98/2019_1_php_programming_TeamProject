@@ -24,31 +24,18 @@
     $('#upload_image').click(function () {
         $('#upload_image_pop_up').bPopup();
     });
-    $('input[name="pw2"]').change(function () {
+    $('#pw_confirm').change(function () {
         if(($('#pw_init').val()) == ($('#pw_confirm').val())){
             $('#check_pw').css('color','green');
             $('#check_pw').text("비밀번호가 일치합니다.");
-
         }
         else{
             $('#check_pw').css('color','red');
             $('#check_pw').text("비밀번호가 일치하지 않습니다.");
         }
     });
-
     $("#pw_init").change(function(){
         checkPassword($('#pw_init').val(),$('#id1').val());
-    });
-
-    $("#email_domain").change(function () {
-        var target = $("#email_domain option:selected").val();
-        var target_index = $("#email_domain option:selected").index();
-        if(target_index != 0) {
-           $('#email_text').val(target);
-        }
-        else{
-            $('#email_text').val('');
-        }
     });
     function checkPassword(password,id){
 

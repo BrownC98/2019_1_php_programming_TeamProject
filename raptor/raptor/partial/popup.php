@@ -4,6 +4,7 @@
         <input type="text" placeholder="id" name="id">
         <input type="password" placeholder="password" name="pw">
         <input type="submit" value="Login">
+        <input type="button" id="regist" onclick="location.href='register.php'" value="회원가입">
     </form>
 </div>
 
