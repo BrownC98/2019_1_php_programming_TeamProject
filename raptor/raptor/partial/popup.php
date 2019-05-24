@@ -1,10 +1,18 @@
 <div id="element_to_pop_up">
     <h3>Login</h3>
     <form method="post" action="function/login.php">
-        <input type="text" placeholder="id" name="id">
-        <input type="password" placeholder="password" name="pw">
-        <input type="submit" value="Login">
-        <input type="button" id="regist" onclick="location.href='register.php'" value="회원가입">
+        <div class="login_form">
+             <span class="join_box">
+                <input class="int" type="text" placeholder="id" name="id">
+            </span>
+            <span class="join_box pw">
+                <input class="int" type="password" placeholder="password" name="pw">
+            </span>
+        </div>
+        <div>
+            <input class="btn_type" type="submit" value="Login">
+            <input class="btn_type" type="button" id="regist" onclick="location.href='register.php'" value="sign up">
+        </div>
     </form>
 </div>
 
