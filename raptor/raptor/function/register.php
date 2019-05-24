@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <?php
 /**
  * Created by PhpStorm.
@@ -32,6 +33,9 @@ switch ($_POST[email_domain]){
     case 4:
         $email_domain = "@nate.com";
         break;
+}
+if($id || $pw || $name || $_POST[$email]||$_POST[phone1]||$_POST[phone2]||$_POST[phone3]){
+    echo"<script> alert('올바르지 않은 회원정보입니다.')</script> <script> location.replace('../register.php')</script>";
 }
 $email = $_POST[email].$email_domain;
 $phone = $_POST[phone1]."-".$_POST[phone2]."-".$_POST[phone3];

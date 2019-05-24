@@ -17,7 +17,7 @@
                 <?php
                 if($_SESSION[id]) {
                     // Login state
-                    echo "<li><a id=\"logout\" href=\"function/logout.php\">Logout</a></li>";
+                    echo "<li class='nav-item cta'><a id=\"logout\" href=\"function/logout.php\"class='nav-link'>Logout</a></li>";
                 } else {
                     // Logout state
                     echo "<li class=\"nav-item cta\"><a href=\"#\" class=\"nav-link\" id=\"login\"><span>Log in</span></a></li>";
