@@ -34,23 +34,20 @@ switch ($_POST[email_domain]){
         $email_domain = "@nate.com";
         break;
 }
-if($id || $pw || $name || $_POST[$email]||$_POST[phone1]||$_POST[phone2]||$_POST[phone3]){
+if(!($id || $pw || $name || $_POST[$email]||$_POST[phone1]||$_POST[phone2]||$_POST[phone3])){
     echo"<script> alert('올바르지 않은 회원정보입니다.')</script> <script> location.replace('../register.php')</script>";
-}
-$email = $_POST[email].$email_domain;
-$phone = $_POST[phone1]."-".$_POST[phone2]."-".$_POST[phone3];
-$sql = "insert into user values('$id','$pw','$name','$gender','$email','$phone')";
-$result = mysql_query($sql,$conn);
-if($result){
-
-    echo"<script> alert('성공적으로 회원가입되었습니다.')</script> <script> location.replace('../index.php')</script>";
 }
 else{
-    echo"<script> alert('올바르지 않은 회원정보입니다.')</script> <script> location.replace('../register.php')</script>";
+    $email = $_POST[email].$email_domain;
+    $phone = $_POST[phone1]."-".$_POST[phone2]."-".$_POST[phone3];
+    $sql = "insert into user values('$id','$pw','$name','$gender','$email','$phone')";
+    $result = mysql_query($sql,$conn);
+    if($result){
+
+        echo"<script> alert('성공적으로 회원가입되었습니다.')</script> <script> location.replace('../index.php')</script>";
+    }
+    else{
+        echo"<script> alert('올바르지 않은 회원정보입니다.')</script> <script> location.replace('../register.php')</script>";
+    }
 }
-
-
-
-
-
 ?>
