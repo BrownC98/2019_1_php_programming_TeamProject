@@ -1,6 +1,9 @@
 <title>Raptor - Free Bootstrap 4 Template by Colorlib</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="google-signin-client_id" content="836369373770-skn5potjiv31qtfmvg2fjbas4eveadks.apps.googleusercontent.com">
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 <link rel="stylesheet" href="css/bpopup.css" />
