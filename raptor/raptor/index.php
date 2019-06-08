@@ -23,20 +23,20 @@
         <div class="slider-text d-md-flex align-items-center" data-scrollax-parent="true">
 
           <div class="one-forth pr-md-4 ftco-animate align-self-md-center" data-scrollax=" properties: { translateY: '70%' }">
-          	<h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Design. <br> Development. <br> Hosting.</h1>
-            <p class="mb-md-5 mb-sm-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+          	<h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Welcome. <br> Library. <br> Hosting.</h1>
+            <p style="font-style: italic" class="mb-md-5 mb-sm-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">아무것도 기억하지 못하는 순간을 기억할 때 그 순간은 오직 나만의 것이 된다.</p>
             <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#" class="btn btn-primary px-4 py-3">Get started</a></p>
           </div>
           <div class="one-half align-self-md-end align-self-sm-center">
           	<div class="slider-carousel owl-carousel">
           		<div class="item">
-			          <img src="images/dashboard_full_1.png" class="img-fluid img"alt="">
+			          <img style="border-radius: 10px" src="https://img1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/liveboard/greattak/7d702893683c4a4ea47d3de2b5e67725.jpeg" class="img-fluid img"alt="">
 		          </div>
 		          <div class="item">
-			          <img src="images/dashboard_full_2.png" class="img-fluid img"alt="">
+			          <img style="border-radius: 10px" src=http://www.methodos.co.kr/data/cheditor4/1707/fbae20e72f934f19bca3e1228dc531e8_20170703133831_fvwdvjza.jpg class="img-fluid img"alt="">
 		          </div>
 		          <div class="item">
-			          <img src="images/dashboard_full_3.png" class="img-fluid img"alt="">
+			          <img style="border-radius: 10px" src="http://www.edudaily.co.kr/PEG/15209259337173.jpg" class="img-fluid img"alt="">
 		          </div>
 	          </div>
           </div>

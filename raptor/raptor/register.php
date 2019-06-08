@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+<?php
+include "./server_conn/conn.php";
+?>
 <html>
 <head>
     <?php
     include "partial/meta.php"
     ?>
+
     <link rel="stylesheet" href="css/register.css"/>
     <title>회원 가입</title>
 
@@ -31,7 +35,7 @@
                     </span>
                     <h5 class="join_title">비밀번호 확인</h5>
                     <span class="ps_box">
-                        <input class="int" type = "password" id="pw_confirm" maxlength="30"/>
+                        <input class="int" type = "password" id="pw_confirm" name = "re_pw" maxlength="30"/>
                     </span>
                     <span class="error_next_box" id="check_pw">&nbsp;*비밀번호를 다시입력하여주세요.</span>
                 </div>
@@ -68,7 +72,13 @@
                     <div class="phone_wrap">
                         <div class="phone_1">
                             <span class="ps_box">
-                                <input class="int phone" type = "text" name = "phone1" maxlength="3"/>
+                                <select class="sel phone" name="phone1">
+                                    <option value = "0" selected>010</option>
+                                    <option value="1">011</option>
+                                    <option value="2">016</option>
+                                    <option value="3">017</option>
+                                    <option value="4">018</option>
+                                </select>
                             </span>
                         </div>
                         <div class="phone_2">

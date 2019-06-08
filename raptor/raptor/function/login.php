@@ -6,7 +6,7 @@
  * Date: 2019-05-02
  * Time: ���� 2:40
  */
-
+session_start();
 include "../server_conn/conn.php";
 $id = $_POST[id];
 $pw = $_POST[pw];

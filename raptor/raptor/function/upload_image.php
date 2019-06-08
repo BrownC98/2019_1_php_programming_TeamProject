@@ -37,10 +37,10 @@ if( $error != UPLOAD_ERR_OK ) {
 }
 
 // 확장자 확인
-if( !in_array($ext, $allowed_ext) ) {
-    echo "허용되지 않는 확장자입니다.";
-    exit;
-}
+//if( !in_array($ext, $allowed_ext) ) {
+//    echo "허용되지 않는 확장자입니다.";
+//    exit;
+//}
 
 $name = uniqid("img-") . '.' . $ext;
 
@@ -57,11 +57,10 @@ move_uploaded_file( $_FILES['myfile']['tmp_name'], "../" . "$uploads_thumbs_dir/
 //	<li>파일크기: {$_FILES['myfile']['size']} 바이트</li>
 //</ul>";
 
-$sql = "insert into galley(user_id, image_big_url, image_thumbs_url, description, title) values('$_SESSION[id]', '$uploads_big_dir/$name', '$uploads_thumbs_dir/$name', '$_POST[description]', '$_POST[title]')";
+$sql = "insert into gallery(user_id, image_big_url, imae_thumbs_url, description, title) values('$_SESSION[id]', '$uploads_big_dir/$name', '$uploads_thumbs_dir/$name', '$_POST[description]', '$_POST[title]')";
 $result = mysql_query($sql, $conn);
 
 echo "<meta charset='utf-8'>";
-
 if($result) {
     // success
     echo "<script> alert('파일 업로드 성공'); </script>";

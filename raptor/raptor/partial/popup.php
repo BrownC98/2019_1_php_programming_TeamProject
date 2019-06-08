@@ -17,10 +17,12 @@
 </div>
 
 <div id="upload_image_pop_up">
-    <h3> Upload Image </h3>
+    <div class="image_header">
+        <h3> Upload Image </h3>
+    </div>
     <form id="form1" enctype='multipart/form-data' method="post" action="function/upload_image.php">
         <input type='file' id="imgInp" name="myfile" />
-        <img id="blah" src="#" alt="your image" style="display: none; margin-bottom: 10px;" />
+        <img class="btn_type" id="blah" src="#" alt="your image" style="display: none; margin-bottom: 10px;" />
         <input type="text" placeholder="title" name="title">
         <input type="text" placeholder="description" name="description">
         <input type="submit" value="Upload">

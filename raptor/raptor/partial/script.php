@@ -16,6 +16,32 @@
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
 <script src="js/jquery.bpopup.min.js"></script>
+<script type='text/javascript' src='js/unitegallery.min.js'></script>
+<script type='text/javascript' src='js/ug-theme-tiles.js'></script>
+<script type="text/javascript">
+
+    jQuery(document).ready(function(){
+
+        jQuery("#gallery").unitegallery();
+
+    });
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#blah').attr('src', e.target.result);
+                $('#blah').css('display', 'block');
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#imgInp").change(function() {
+        readURL(this);
+    });
+</script>
 <script>
     $('#login').click(function () {
         $('#element_to_pop_up').bPopup();
@@ -64,6 +90,8 @@
         }*/
         return true;
     }
-
+    $(window).load(function() {
+        $('#loading').hide();
+    });
 </script>
 

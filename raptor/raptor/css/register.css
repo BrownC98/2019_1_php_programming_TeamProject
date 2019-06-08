@@ -97,6 +97,11 @@ button, input, select, textarea {
     -webkit-background-size: 20px 8px;
     background-size: 20px 8px;
 }
+.sel.phone{
+    border: none;
+    font-size: 20px;
+    font: 400 20px Arial;
+}
 .gender_nationality .gender_code, .join_mobile .country_code, .join_sex .gender_code {
     display: block;
     width: 100%;
