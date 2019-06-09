@@ -34,7 +34,7 @@ switch ($_POST[email_domain]){
         $email_domain = "@nate.com";
         break;
 }
-if(!($id || $pw || $name || $_POST[$email]||$_POST[phone1]||$_POST[phone2]||$_POST[phone3])){
+if(!($id || $pw || $name || $_POST[email]||$_POST[phone1]||$_POST[phone2]||$_POST[phone3])){
     echo"<script> alert('올바르지 않은 회원정보입니다.')</script> <script> location.replace('../register.php')</script>";
 }
 else{

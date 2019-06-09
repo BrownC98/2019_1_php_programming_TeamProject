@@ -29,6 +29,6 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-guarantee:before { content: "\f100"; }
+.flaticon-guarantee:before { content: url("https://image.shutterstock.com/image-vector/audit-icon-vector-260nw-723703846.jpg"); }
 .flaticon-shield:before { content: "\f101"; }
 .flaticon-support:before { content: "\f102"; }

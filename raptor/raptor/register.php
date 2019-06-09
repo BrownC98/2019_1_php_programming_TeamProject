@@ -9,8 +9,8 @@
 
 
 </head>
-<body>
-<div bgcolor = "#cdfdee" width="100%">
+<body style="background-image: url('https://s2.best-wallpaper.net/wallpaper/1920x1200/1904/Cat-study-hard-reading-book_1920x1200.jpg')">
+<div bgcolor = "#cdfdee" width="100%" height="100%">
     <div id="header" class="join_membership" role="banner" padding="62px 0px 59px">
         <h1>회원가입</h1>
     </div>

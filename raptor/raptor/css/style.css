@@ -9100,3 +9100,39 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+.css-cancel {
+  display: inline-block;
+  position: relative;
+  margin: 0 20px 0 7px;
+  padding: 0;
+  width: 4px;
+  height: 20px;
+  background: #000;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+.css-cancel:before {
+  display: block;
+  content: "";
+  position: relative;
+  top: 50%;
+  left: -8px;
+  width: 20px;
+  height: 4px;
+  margin-top: -2px;
+  background: #000;
+  z-index: 2;
+}
+.section-upload {
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+  z-index: 99999;
+}
+.section-upload a{
+  text-decoration: none;
+  color: #3a3a3a;
+}
+.section-upload a:hover{
+  color: #e74c3c;
+}

@@ -36,6 +36,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-guarantee:before { content: "\f100"; }
+.flaticon-guarantee:before { content: url("https://kin-phinf.pstatic.net/storage/upload/2010/11/11/52010105_1289742843.png?type=w750"); }
 .flaticon-shield:before { content: "\f101"; }
 .flaticon-support:before { content: "\f102"; }

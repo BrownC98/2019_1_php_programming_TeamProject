@@ -1,6 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <?
+       include "server_conn/conn.php"
+      ?>
       <?php
         include "partial/meta.php";
       ?>
@@ -22,7 +28,7 @@
         <div class="row no-gutters d-flex slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.php">Home</a></span> <span>About</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About Us</h1>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About this project</h1>
           </div>
         </div>
       </div>
@@ -31,7 +37,7 @@
     <section class="ftco-section bg-light">
     	<div class="container">
     		<div class="row d-md-flex">
-	    		<div class="col-md-6 ftco-animate img about-image" style="background-image: url(images/about.jpg);">
+	    		<div id="introduce"class="col-md-6 ftco-animate img about-image" style="background-image: url('https://ppss.kr/wp-content/uploads/2017/06/002-69-549x365.jpg');">
 	    		</div>
 	    		<div class="col-md-6 ftco-animate p-md-5">
 		    		<div class="row">
@@ -50,23 +56,24 @@
 
 		              <div class="tab-pane fade show active" id="v-pills-whatwedo" role="tabpanel" aria-labelledby="v-pills-whatwedo-tab">
 		              	<div>
-			                <h2 class="mb-4">Offering Reliable Hosting</h2>
-			              	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+			                <h2 class="mb-4">나만의 도서관리 홈페이지를 만들자</h2>
+			              	<p>사용자가 자신의 도서기록들을 정리할 수 있는 사이트 구축</p>
+                            <p>인기있는 도서들을 추천해주는 기능</p>
+                            <p>도서에 대한 리뷰 작성도 추가</p>
 				            </div>
 		              </div>
 
 		              <div class="tab-pane fade" id="v-pills-mission" role="tabpanel" aria-labelledby="v-pills-mission-tab">
 		                <div>
-			                <h2 class="mb-4">Exceptional Web Solutions</h2>
-			              	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                            <h2 class="mb-4" style="color: #721c24">자신만의 책을 저장하는 공간</h2>
+			              	<p>자신만의 책을 저장하는 공간을 갖게 하기 위해서 로그인 기능을 추가.로그인을 하게 되면 사용자만의 도서 저장 공간이 생깁니다. </p>
+                            <h2 class="mb-4" style="color: #533f03">모두가 사용하는 공용 게시판</h2>
 				            </div>
 		              </div>
 
 		              <div class="tab-pane fade" id="v-pills-goal" role="tabpanel" aria-labelledby="v-pills-goal-tab">
 		                <div>
-			                <h2 class="mb-4">Help Our Customer</h2>
+			                <h2 class="mb-4">자신만의 도서 인스타를 가지게 하자</h2>
 			              	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
 				            </div>
@@ -85,25 +92,24 @@
           <div class="col-md-7 text-center heading-section ftco-animate">
             <span class="subheading">Team</span>
             <h2 class="mb-4">Our Team</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 mb-5 ftco-animate">
             <div class="block-10">
               <div class="person-info mb-2">
-                <span class="name">Jacob Smith</span>
-                <span class="position">Co Designer</span>
+                <span class="name" style="font-style: revert">김대건</span>
+                <span class="position">2015136013</span>
               </div>
-              <img src="images/person_1.jpg" alt="" class="img-fluid mb-3">
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <img src="images/daegun.jpg" alt="" class="img-fluid mb-3">
+              <p>책 읽는 것 좋아하지만 요즘은 웹을 만들어야 해서 책을 못 읽고 있습니다.</p>
             </div>
           </div>
           <div class="col-md-4 mb-5 ftco-animate">
             <div class="block-10">
               <div class="person-info mb-2">
-                <span class="name">Aldin Henderson</span>
-                <span class="position">Web Developer</span>
+                <span class="name">갈동건</span>
+                <span class="position">2017</span>
               </div>
               <img src="images/person_3.jpg" alt="" class="img-fluid mb-3">
               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
@@ -112,146 +118,96 @@
           <div class="col-md-4 mb-5 ftco-animate">
             <div class="block-10">
               <div class="person-info mb-2">
-                <span class="name">Mark Willis</span>
-                <span class="position">Lead Web Developer</span>
+                <span class="name">Google</span>
+                <span class="position">great partner</span>
               </div>
-              <img src="images/person_2.jpg" alt="" class="img-fluid mb-3">
+              <img src="https://pbs.twimg.com/profile_images/770139154898382848/ndFg-IDH.jpg" alt="" class="img-fluid mb-3">
               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  
-    
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-4">Some fun facts</h2>
-            <span class="subheading">More than 100,000 websites hosted</span>
-          </div>
-        </div>
-    		<div class="row justify-content-center">
-    			<div class="col-md-10">
-		    		<div class="row">
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="2000">0</strong>
-		                <span>CMS Installation</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="100">0</strong>
-		                <span>Awards Won</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="32000">0</strong>
-		                <span>Registered Domains</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="31998">0</strong>
-		                <span>Satisfied Customers</span>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
 
     <section class="ftco-section testimony-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Customer Says</span>
-            <h2 class="mb-4">Our satisfied customer says</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+            <span class="subheading">JQEURY & JAVASCRIPT & CSS</span>
+            <h2 class="mb-4">기능들</h2>
+            <p>웹 페이지를 만드는 데 쓰이는 다양한 기능들 JQEURY, CSS 등의 다양한 플러그 인을 이용하여 완성하였는데 그러한 기능들에 대한 설명</p>
           </div>
         </div>
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
               <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                <div class="testim ony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url('https://previews.123rf.com/images/helmut1979/helmut19791508/helmut1979150800063/43544683-%ED%9D%B0%EC%83%89-%EB%B0%B0%EA%B2%BD%EC%97%90-%EB%B9%A8%EA%B0%84%EC%83%89-%EC%B2%B4%ED%81%AC-%EA%B8%B0%ED%98%B8-%EA%B7%B8%EB%A6%BC.jpg')">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
+                    <p class="mb-5">숫자+영문자+특수문자 조합으로 8자리 이상 사용해야 한다.<br>숫자와 영문자를 혼용하여야 한다.<br>같은 문자를 4번 이상 사용할 수 없다.</p>
+                    <p class="name">check Password</p>
                     <span class="position">Marketing Manager</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
+                  <div class="user-img mb-5" style="background-image: url('https://www.mangboard.com/wp-content/uploads/mangboard/2017/04/07/F816_imageupload.png')">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
+                    <p class="mb-5">클라이언트 측에 있는 image를 <br>서버 측으로 이동시킨다.<br> 이 때 데이터 베이스도 연동되어 <br>튜플을 저장한다.</p>
+                    <p class="name">Upload image</p>
                     <span class="position">Interface Designer</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
+                  <div class="user-img mb-5" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhG-Ugs4X64hzRQFSAwbj6AK6ggF-PhDvxc4JqIiiYbU61zHd')">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
+                    <p class="mb-5">특정 이벤트에 대하여 팝업창을 띄운다.</p>
+                    <p class="name">bPopup</p>
                     <span class="position">UI Designer</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                  <div class="user-img mb-5" style="background-image: url(https://t1.daumcdn.net/cfile/tistory/2350054F58B298A72B)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
+                    <p class="mb-5">구글 로그인 api로서 구글로 로그인하는 기능을 추가하였다.</p>
+                    <p class="name">Google Login</p>
                     <span class="position">Web Developer</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                  <div class="user-img mb-5" style="background-image: url('https://static8.depositphotos.com/1241729/873/v/950/depositphotos_8737963-stock-illustration-vector-red-x-cross-sign.jpg')">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">System Analytics</span>
+                    <p class="mb-5">css 디자인으로 x 표시를 가져왔다.</p>
+                    <p class="name">x 표시</p>
+                    <span class="position">CSS</span>
                   </div>
                 </div>
               </div>
@@ -260,72 +216,76 @@
         </div>
       </div>
     </section>
-
-
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
+  <section class="ftco-section">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Raptor.</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <p class="mt-4"><a href="#" class="btn btn-primary p-3">Get in touch</a></p>
-            </div>
+          <div class="row justify-content-center mb-5 pb-5">
+              <div class="col-md-7 text-center heading-section ftco-animate">
+                  <span class="subheading">Services</span>
+                  <h2 class="mb-4">아쉬운 점들</h2>
+              </div>
           </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Unseful Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Servers</a></li>
-                <li><a href="#" class="py-2 d-block">Windos Hosting</a></li>
-                <li><a href="#" class="py-2 d-block">Cloud Hosting</a></li>
-                <li><a href="#" class="py-2 d-block">OS Servers</a></li>
-                <li><a href="#" class="py-2 d-block">Linux Servers</a></li>
-                <li><a href="#" class="py-2 d-block">Policy</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Navigational</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Home</a></li>
-                <li><a href="#" class="py-2 d-block">Domain</a></li>
-                <li><a href="#" class="py-2 d-block">Hosting</a></li>
-                <li><a href="#" class="py-2 d-block">About</a></li>
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
-                <li><a href="#" class="py-2 d-block">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	                <li><span class="icon icon-clock-o"></span><span class="text">Saturday &mdash; Sunday 8:00am - 5:00pm</span></li>
-	              </ul>
-	            </div>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+          <div class="row">
+              <div class="col-md-12 nav-link-wrap mb-5 pb-md-5 pb-sm-1 ftco-animate">
+                  <div class="nav ftco-animate nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link active" id="v-pills-nextgen-tab" data-toggle="pill" href="#v-pills-nextgen" role="tab" aria-controls="v-pills-nextgen" aria-selected="true">알라딘 API</a>
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                      <a class="nav-link" id="v-pills-performance-tab" data-toggle="pill" href="#v-pills-performance" role="tab" aria-controls="v-pills-performance" aria-selected="false">Performance</a>
+
+                      <a class="nav-link" id="v-pills-effect-tab" data-toggle="pill" href="#v-pills-effect" role="tab" aria-controls="v-pills-effect" aria-selected="false">Effectiveness</a>
+                  </div>
+              </div>
+              <div class="col-md-12 align-items-center ftco-animate">
+
+                  <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+                      <div class="tab-pane fade show active" id="v-pills-nextgen" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                          <div class="d-md-flex">
+                              <div class="one-forth align-self-center">
+                                  <img src="https://t1.daumcdn.net/cfile/tistory/1724A9174C6113160A" class="img-fluid border" alt="">
+                              </div>
+                              <div class="one-half ml-md-5 align-self-center">
+                                  <h2 class="mb-4">TTB(thanks to Bloger)</h2>
+                                  <p>해당 API나 링크로 도서를 구매 했을 경우 수익을 나누고 있어서
+                                      활용하는 방법에 따라 어느정도 수입을 올릴 수도 있습니다.</p>
+                                  <p>그런 이유에서 알라딘 api로 상품정보를 검색하기 위해서 사이트가 등록되어 있고 그것이 도서관련해서 접근하는 것인지를 명확히 해야해서 인증이 따로 필요합니다.</p>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="tab-pane fade" id="v-pills-performance" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+                          <div class="d-md-flex">
+                              <div class="one-forth order-last align-self-center">
+                                  <img src="images/dashboard_full_2.jpg" class="img-fluid border" alt="">
+                              </div>
+                              <div class="one-half order-first mr-md-5 align-self-center">
+                                  <h2 class="mb-4">Performance VPS hosting</h2>
+                                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="tab-pane fade" id="v-pills-effect" role="tabpanel" aria-labelledby="v-pills-effect-tab">
+                          <div class="d-md-flex">
+                              <div class="one-forth align-self-center">
+                                  <img src="images/dashboard_full_1.jpg" class="img-fluid border" alt="">
+                              </div>
+                              <div class="one-half ml-md-5 align-self-center">
+                                  <h2 class="mb-4">Effective VPS hosting</h2>
+                                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-    </footer>
+  </section>
+
+  <?
+    include "partial/foot.php"
+  ?>
     
   
 

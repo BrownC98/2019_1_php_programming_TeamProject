@@ -17,6 +17,21 @@
 <script src="js/main.js"></script>
 <script src="js/jquery.bpopup.min.js"></script>
 <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#replace_2').attr('src',e.target.result);
+                $('#replace_3').replaceWith();
+                $('#replace_4').replaceWith();
+                $('#replace_5').replaceWith();
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#imgInp").change(function() {
+        readURL(this);
+    });
     $('#login').click(function () {
         $('#element_to_pop_up').bPopup();
     });
@@ -64,6 +79,24 @@
         }*/
         return true;
     }
+    $('#v-pills-goal-tab').click(function () {
+        $('#introduce').css({'background-image':"url(https://www.youredm.com/wp-content/uploads/2017/11/instagram.jpg)"});
+    })
+    $('#v-pills-whatwedo-tab').click(function () {
+        $('#introduce').css({'background-image':"url(https://ppss.kr/wp-content/uploads/2017/06/002-69-549x365.jpg)"});
+    })
+    $('#v-pills-mission-tab').click(function () {
+        $('#introduce').css({'background-image':"url(https://st2.depositphotos.com/2885805/9525/v/950/depositphotos_95258430-stock-illustration-personal-library-concept-illustration.jpg)"});
+    })
+    $('#instagram').click(function () {
+        location.replace("https://www.instagram.com");
+    })
+    $('#facebook').click(function () {
+        location.replace("https://www.facebook.com/");
+    })
+    $('#twitter').click(function () {
+        location.replace("https://twitter.com");
+    })
 
 </script>
 

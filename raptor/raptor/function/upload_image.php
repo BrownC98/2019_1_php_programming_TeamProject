@@ -57,7 +57,7 @@ move_uploaded_file( $_FILES['myfile']['tmp_name'], "../" . "$uploads_thumbs_dir/
 //	<li>파일크기: {$_FILES['myfile']['size']} 바이트</li>
 //</ul>";
 
-$sql = "insert into galley(user_id, image_big_url, image_thumbs_url, description, title) values('$_SESSION[id]', '$uploads_big_dir/$name', '$uploads_thumbs_dir/$name', '$_POST[description]', '$_POST[title]')";
+$sql = "insert into book_gallery(user_id, image_url,description, title) values('$_SESSION[id]', '$uploads_big_dir/$name','$_POST[description]', '$_POST[title]')";
 $result = mysql_query($sql, $conn);
 
 echo "<meta charset='utf-8'>";
@@ -70,6 +70,6 @@ if($result) {
     echo "<script> alert('파일 업로드 실패'); </script>";
 }
 
-echo "<script> location.replace('../gallery.php'); </script>"
+echo "<script> location.replace('../blog.php'); </script>"
 
 ?>

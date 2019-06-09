@@ -1,3 +1,9 @@
+<?php
+session_start();
+?>
+<?php
+    include "server_conn/conn.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,111 +32,39 @@
         </div>
       </div>
     </div>
+    <div class="section-upload">
+        <a id="#" href="Uploadmybook.php"> Upload to My books </a>
+    </div>
+
 
     <section class="ftco-section bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-                <div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_4.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-                <div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_5.jpg');">
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.php" class="block-20" style="background-image: url('images/image_6.jpg');">
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-3">
-                  <div><a href="#">August 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
+            <?
+            $sql = "select * from book_gallery where user_id='$_SESSION[id]'";
+            $result = mysql_query($sql, $conn);
+            $index  = 0;
+            while($row = mysql_fetch_array($result)) {
+                echo"<div class=\"col-md-4 ftco-animate\">
+                        <div class=\"blog-entry\">
+                            <h2 style=\"background-color: #9e9e9e; text-align: center\">$row[title]</h2>
+                            <a class=\"block-20\" style=\"background-image: url('$row[image_url]');\">
+                                <div id='delete_book' class=\"css-cancel\" onclick='location.replace(\"function/delete_image.php?id=$row[id]\")'></div>
+                            </a>
+                            <div class=\"text p-4 d-block\">
+                                 <div class=\"meta mb-3\">
+                                    <div><a>11111</a></div>
+                                    <div><a>$row[user_id]</a></div>
+                                    <div><a class=\"meta-chat\"><span class=\"icon-chat\"></span> 3</a></div>
+                                </div>
+                             <h3 class=\"heading\" style='font-style: italic'><a href=\"#\">$row[description]</a></h3>
+                            </div>
+                        </div>
+                    </div>";
+                $index +=1;
+            }
+            ?>
         </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
 
@@ -212,6 +146,7 @@
   <?php
   include "partial/script.php"
   ?>
-    
+
+
   </body>
 </html>
