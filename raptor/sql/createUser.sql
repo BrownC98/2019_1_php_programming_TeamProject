@@ -4,6 +4,7 @@ create table board(
   board_id int AUTO_INCREMENT primary key,
   title TEXT(10),
   author varchar(20),
+  content TEXT,
   date timestamp default current_timestamp,
   cnt int default 0,
   constraint author_fk foreign key(author)
