@@ -122,9 +122,9 @@ session_start();
                 <span class="position">great partner</span>
               </div>
               <img src="https://pbs.twimg.com/profile_images/770139154898382848/ndFg-IDH.jpg" alt="" class="img-fluid mb-3">
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p>구글은 타의 추종을 불허하는 강력한 검색 능력을 가지고 있다. 이 때문에 영미권에서 Google이라는 단어는 고유명사를 뛰어넘어서 '인터넷 정보 검색을 위해서 구글 엔진을 사용하다'의미의 동사 형태로도 통용되며, 이는 일개 인터넷 은어를 뛰어넘어서 심지어 웹스터 사전에서도 등재되어 있다..</p>
             </div>
-          </div>
+          </div
         </div>
       </div>
     </section>
@@ -142,7 +142,7 @@ session_start();
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
               <div class="item">
-                <div class="testim ony-wrap p-4 pb-5">
+                <div class="testimony-wrap p-4 pb-5">
                   <div class="user-img mb-5" style="background-image: url('https://previews.123rf.com/images/helmut1979/helmut19791508/helmut1979150800063/43544683-%ED%9D%B0%EC%83%89-%EB%B0%B0%EA%B2%BD%EC%97%90-%EB%B9%A8%EA%B0%84%EC%83%89-%EC%B2%B4%ED%81%AC-%EA%B8%B0%ED%98%B8-%EA%B7%B8%EB%A6%BC.jpg')">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
@@ -229,7 +229,7 @@ session_start();
                   <div class="nav ftco-animate nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                       <a class="nav-link active" id="v-pills-nextgen-tab" data-toggle="pill" href="#v-pills-nextgen" role="tab" aria-controls="v-pills-nextgen" aria-selected="true">알라딘 API</a>
 
-                      <a class="nav-link" id="v-pills-performance-tab" data-toggle="pill" href="#v-pills-performance" role="tab" aria-controls="v-pills-performance" aria-selected="false">Performance</a>
+                      <a class="nav-link" id="v-pills-performance-tab" data-toggle="pill" href="#v-pills-performance" role="tab" aria-controls="v-pills-performance" aria-selected="false">네이버 API</a>
 
                       <a class="nav-link" id="v-pills-effect-tab" data-toggle="pill" href="#v-pills-effect" role="tab" aria-controls="v-pills-effect" aria-selected="false">Effectiveness</a>
                   </div>
@@ -255,12 +255,12 @@ session_start();
                       <div class="tab-pane fade" id="v-pills-performance" role="tabpanel" aria-labelledby="v-pills-performance-tab">
                           <div class="d-md-flex">
                               <div class="one-forth order-last align-self-center">
-                                  <img src="images/dashboard_full_2.jpg" class="img-fluid border" alt="">
+                                  <img src="https://developers.naver.com/inc/devcenter/images/cont/img_search_tutorial_tab1_01.png" class="img-fluid border" alt="">
                               </div>
                               <div class="one-half order-first mr-md-5 align-self-center">
-                                  <h2 class="mb-4">Performance VPS hosting</h2>
-                                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                                  <h2 class="mb-4">Naver API</h2>
+                                  <p>네이버 책검색 API를 사용하여 아래와 같이 책 정보를 검색하는 웹페이지를 만드실 수 있습니다. 예제는 HTML/CSS 및 Ajax와 PHP를 사용하여 아래와 같은 결과를 만들 수 있도록 도와줍니다.</p>
+                                  <p>기본적인 데이터 확인을 위하여 CSS를 사용하고 추가적으로 Ajax 사용을 위하여 JQuery가 사용되었습니다.</p>
                               </div>
                           </div>
                       </div>

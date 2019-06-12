@@ -7,6 +7,11 @@
       <?php
         include "partial/meta.php";
       ?>
+      <?php
+      include "server_conn/conn.php";
+      $sql = "select * from book_gallery limit 5";
+      $result = mysql_query($sql);
+      ?>
   </head>
   <body>
     
@@ -55,9 +60,9 @@
         </div>
     		<div class="row justify-content-center">
     			<div class="col-md-8 ftco-animate">
-    				<form action="#" class="domain-form">
+    				<form action="book.php" class="domain-form" method="post">
               <div class="form-group d-md-flex">
-                <input type="text" class="form-control px-4" placeholder="작품 제목, 작가 주인공을 검색해 보세요">
+                <input type="text" class="form-control px-4" name="search_book" placeholder="작품 제목, 작가 주인공을 검색해 보세요">
                 <input type="submit" class="search-domain btn btn-primary px-5" value="Search Domain">
               </div>
             </form>
@@ -120,20 +125,22 @@
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
                 <?php
-                echo"<div class=\"item\">";
-                echo"<div class=\"testimony-wrap p-4 pb-5\">";
-                echo"<div class=\"user-img mb-5\" style=\"background-image:url($row[image])\">";
-                echo"<span class=\"quote d-flex align-items-center justify-content-center\">";
-                echo"<i class=\"icon-quote-left\"></i>";
-                echo"</span>";
-                echo"</div>";
-                echo"<div class=\"text\">";
-                echo"<p class=\"mb-5\"> $row[description] </p>";
-                echo"<p class=\"name\">$row[id]</p>";
-                echo" <span class=\"position\">Interface Designer</span>";
-                echo"</div>";
-                echo"</div>";
-                echo"</div>";
+                while($row = mysql_fetch_array($result)) {
+                    echo "<div class=\"item\">";
+                    echo "<div class=\"testimony-wrap p-4 pb-5\">";
+                    echo "<div class=\"user-img mb-5\" style=\"background-image:url($row[image_url])\">";
+                    echo "<span class=\"quote d-flex align-items-center justify-content-center\">";
+                    echo "<i class=\"icon-quote-left\"></i>";
+                    echo "</span>";
+                    echo "</div>";
+                    echo "<div class=\"text\">";
+                    echo "<p class=\"mb-5\"> $row[description] </p>";
+                    echo "<p class=\"name\">$row[user_id]</p>";
+                    echo " <span class=\"position\">Interface Designer</span>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                }
                 ?>
             </div>
           </div>

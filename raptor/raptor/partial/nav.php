@@ -9,6 +9,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="board_list.php" class="nav-link">Board</a></li>
                 <?php
                 if($_SESSION[id]) {
                     // Login state
