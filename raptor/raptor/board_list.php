@@ -81,7 +81,7 @@ include "partial/nav.php";
                                     <?php if(isset($_SESSION['id'])){ ?>
                                         <button style="float: right" type="button" class="btn btn-success btn-flat" id="writeBtn" onclick="location.href = 'board_write.php'">
                                     <? } else {?>
-                                        <button style="float: right" type="button" class="btn btn-success btn-flat" id="login" onclick="location.href = 'board_write.php'">
+                                        <button style="float: right" type="button" class="btn btn-success btn-flat" id="login" onclick="$('#element_to_pop_up').bPopup()">
                                            <? }?>
 
                                         <i class="fa fa-pencil"></i> 글쓰기
