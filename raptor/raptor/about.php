@@ -74,8 +74,8 @@ session_start();
 		              <div class="tab-pane fade" id="v-pills-goal" role="tabpanel" aria-labelledby="v-pills-goal-tab">
 		                <div>
 			                <h2 class="mb-4">자신만의 도서 인스타를 가지게 하자</h2>
-			              	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+			              	<p>주변 사람들과 소통하고 싶은 욕망을 채워주게 하면서</p>
+			                <p>자신만의 도서 겔러리를 가지는 사이트를 얻게하자</p>
 				            </div>
 		              </div>
 		            </div>
@@ -109,10 +109,10 @@ session_start();
             <div class="block-10">
               <div class="person-info mb-2">
                 <span class="name">갈동건</span>
-                <span class="position">2017</span>
+                <span class="position">2017180002</span>
               </div>
-              <img src="images/person_3.jpg" alt="" class="img-fluid mb-3">
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <img src="images/donggun.jpg" alt="" class="img-fluid mb-3">
+              <p>안녕하세요 갈동건입니다.</p>
             </div>
           </div>
           <div class="col-md-4 mb-5 ftco-animate">
@@ -151,7 +151,7 @@ session_start();
                   <div class="text">
                     <p class="mb-5">숫자+영문자+특수문자 조합으로 8자리 이상 사용해야 한다.<br>숫자와 영문자를 혼용하여야 한다.<br>같은 문자를 4번 이상 사용할 수 없다.</p>
                     <p class="name">check Password</p>
-                    <span class="position">Marketing Manager</span>
+                    <span class="position">JAVA Script</span>
                   </div>
                 </div>
               </div>
@@ -165,7 +165,7 @@ session_start();
                   <div class="text">
                     <p class="mb-5">클라이언트 측에 있는 image를 <br>서버 측으로 이동시킨다.<br> 이 때 데이터 베이스도 연동되어 <br>튜플을 저장한다.</p>
                     <p class="name">Upload image</p>
-                    <span class="position">Interface Designer</span>
+                    <span class="position">JQuery</span>
                   </div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ session_start();
                   <div class="text">
                     <p class="mb-5">특정 이벤트에 대하여 팝업창을 띄운다.</p>
                     <p class="name">bPopup</p>
-                    <span class="position">UI Designer</span>
+                    <span class="position">JQuery</span>
                   </div>
                 </div>
               </div>
@@ -193,7 +193,7 @@ session_start();
                   <div class="text">
                     <p class="mb-5">구글 로그인 api로서 구글로 로그인하는 기능을 추가하였다.</p>
                     <p class="name">Google Login</p>
-                    <span class="position">Web Developer</span>
+                    <span class="position">Failed</span>
                   </div>
                 </div>
               </div>
@@ -211,6 +211,20 @@ session_start();
                   </div>
                 </div>
               </div>
+                <div class="item">
+                    <div class="testimony-wrap p-4 pb-5">
+                        <div class="user-img mb-5" style="background-image: url(https://t1.daumcdn.net/cfile/tistory/2350054F58B298A72B)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                        </div>
+                        <div class="text">
+                            <p class="mb-5">구글 로그인 api로서 구글로 로그인하는 기능을 추가하였다.</p>
+                            <p class="name">Google Login</p>
+                            <span class="position">Failed</span>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
@@ -231,7 +245,7 @@ session_start();
 
                       <a class="nav-link" id="v-pills-performance-tab" data-toggle="pill" href="#v-pills-performance" role="tab" aria-controls="v-pills-performance" aria-selected="false">네이버 API</a>
 
-                      <a class="nav-link" id="v-pills-effect-tab" data-toggle="pill" href="#v-pills-effect" role="tab" aria-controls="v-pills-effect" aria-selected="false">Effectiveness</a>
+                      <a class="nav-link" id="v-pills-effect-tab" data-toggle="pill" href="#v-pills-effect" role="tab" aria-controls="v-pills-effect" aria-selected="false">구글로그인 API</a>
                   </div>
               </div>
               <div class="col-md-12 align-items-center ftco-animate">
@@ -268,12 +282,14 @@ session_start();
                       <div class="tab-pane fade" id="v-pills-effect" role="tabpanel" aria-labelledby="v-pills-effect-tab">
                           <div class="d-md-flex">
                               <div class="one-forth align-self-center">
-                                  <img src="images/dashboard_full_1.jpg" class="img-fluid border" alt="">
+                                  <img src="https://t1.daumcdn.net/cfile/tistory/9994DC335A26428F19" class="img-fluid border" alt="">
                               </div>
                               <div class="one-half ml-md-5 align-self-center">
-                                  <h2 class="mb-4">Effective VPS hosting</h2>
-                                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                                  <h2 class="mb-4">구글 로그인 API</h2>
+                                  <p>컴퓨터에서 gmail.com으로 이동합니다.
+                                      Google 계정 이메일 또는 전화번호와 비밀번호를 입력합니다.
+                                      정보가 이미 입력되어 있어 다른 계정에 로그인해야 하는 경우 다른 계정 사용을 클릭합니다.
+                                      로그인 페이지가 아니라 Gmail 소개 페이지가 표시되는 경우 페이지 오른쪽 위에 있는 로그인을 클릭합니다.</p>
                               </div>
                           </div>
                       </div>

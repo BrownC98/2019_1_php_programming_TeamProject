@@ -32,7 +32,7 @@
 <div class="search_book">
     <fieldset class="srch">
         <legend>검색영역</legend>
-        <input type="text" name="query" id="query" accesskey="s" title="검색어" class="keyword" value="$_POST[search_book]">
+        <input type="text" name="query" id="query" accesskey="s" title="검색어" class="keyword" <? echo "value='애자일' >" ?>
         <input type="button" id="search" name="search" alt="검색" value="검색" />
     </fieldset>
 

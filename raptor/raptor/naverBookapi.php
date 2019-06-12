@@ -3,7 +3,7 @@ class Book
 {
 
     private $key = "zp1iU08e7z2tlP5CWKOG"; // 사용자가 발급받은 오픈 API 키
-    private $searchUrl = "http://openapi.naver.com/search"; // 오픈 API 호출 URL
+    private $searchUrl = "http://openapi.naver.com/v1/search/book.json"; // 오픈 API 호출 URL
     private $target = "book";
 
     /**

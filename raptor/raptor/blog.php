@@ -53,7 +53,7 @@ session_start();
                             </a>
                             <div class=\"text p-4 d-block\">
                                  <div class=\"meta mb-3\">
-                                    <div><a>11111</a></div>
+                                    <div><a>$row[date]</a></div>
                                     <div><a>$row[user_id]</a></div>
                                     <div><a class=\"meta-chat\"><span class=\"icon-chat\"></span> 3</a></div>
                                 </div>

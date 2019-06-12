@@ -9,7 +9,7 @@
       ?>
       <?php
       include "server_conn/conn.php";
-      $sql = "select * from book_gallery limit 5";
+      $sql = "select * from book_gallery order by date limit 5";
       $result = mysql_query($sql);
       ?>
   </head>
@@ -30,7 +30,7 @@
           <div class="one-forth pr-md-4 ftco-animate align-self-md-center" data-scrollax=" properties: { translateY: '70%' }">
           	<h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Book. <br> Review. <br> Changing.</h1>
             <p style="font-style: italic" class="mb-md-5 mb-sm-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">아무도 기억하지 못하는 순간을 홀로 기억할 때 그 순간은 나만의 것이 된다.</p>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#" class="btn btn-primary px-4 py-3">Get started</a></p>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="register.php" class="btn btn-primary px-4 py-3">지금 시작하세요!</a></p>
           </div>
           <div class="one-half align-self-md-end align-self-sm-center">
           	<div class="slider-carousel owl-carousel">
@@ -86,7 +86,7 @@
               <div class="d-flex justify-content-center"><div class="icon"><span style="width: 60px; height: 84px" class="icon-twitter"></span></div></div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">트위터</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p>세상과 소통하고, 관심사를 나누고, 지금 이 순간 일어나고 있는 일들을 둘러보세요.</p>
               </div>
             </div>      
           </div>
@@ -95,7 +95,7 @@
               <div class="d-flex justify-content-center"><div class="icon"><span class="icon-facebook"></span></div></div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">페이스 북</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p>페이스북(Facebook)에서 만나</p>
               </div>
             </div>    
           </div>
@@ -104,7 +104,7 @@
               <div class="d-flex justify-content-center"><div class="icon"><span class="icon-instagram"></span></div></div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">인스타그램</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p>소통하고 싶어</p>
               </div>
             </div>      
           </div>
@@ -117,7 +117,7 @@
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
             <span class="subheading">이 달의 책</span>
-            <h2 class="mb-4">베스트 리뷰</h2>
+            <h2 class="mb-4">요즘 읽히는 책들</h2>
             <p>혼자 있는 시간을 다른이들과 있는 시간만큼<br>아니면 그보다 더 유익한 시간들로 만들어 주는 책들</p>
           </div>
         </div>
@@ -136,7 +136,7 @@
                     echo "<div class=\"text\">";
                     echo "<p class=\"mb-5\"> $row[description] </p>";
                     echo "<p class=\"name\">$row[user_id]</p>";
-                    echo " <span class=\"position\">Interface Designer</span>";
+                    echo " <span class=\"position\">$row[date]</span>";
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";
