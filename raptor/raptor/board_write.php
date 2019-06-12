@@ -53,9 +53,6 @@ include "partial/nav.php";
                                             <textarea class="form-control" id="content" name="content" rows="8"
                                                       placeholder="내용" style="resize: none;"></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="writer" name="writer" placeholder="글쓴이">
-                                    </div>
                                 </div>
                                 <div class="box-footer">
                                     <button type="button" style="float: left;" class="btn btn-primary listBtn" onclick="location.href = 'board_list.php'"><i class="fa fa-list"></i> List</button>
@@ -80,7 +77,7 @@ include "partial/nav.php";
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 <?php
-include "partial/footer.php"
+include "partial/foot.php"
 ?>
 
 <?php

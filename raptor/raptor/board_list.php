@@ -46,7 +46,7 @@ include "partial/nav.php";
     <div class="container-fluid">
         <div class="row no-gutters d-flex slider-text align-items-center justify-content-center" data-scrollax-parent="true">
             <div class="ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                <h1 class="mb-3 bread box-title" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">게시글 목록</h1>
+                <h1 class="mb-3 bread box-title"  data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">게시글 목록</h1>
                 <section class="content" style="padding: auto">
                     <div class="col-lg-12">
                         <div class="box box-primary">
@@ -81,7 +81,7 @@ include "partial/nav.php";
                                     <?php if(isset($_SESSION['id'])){ ?>
                                         <button style="float: right" type="button" class="btn btn-success btn-flat" id="writeBtn" onclick="location.href = 'board_write.php'">
                                     <? } else {?>
-                                        <button style="float: right" type="button" class="btn btn-success btn-flat" id="login" onclick="location.href = 'board_write.php'">
+                                        <button style="float: right" type="button" class="btn btn-success btn-flat" id="login" onclick="notLogin();">
                                            <? }?>
 
                                         <i class="fa fa-pencil"></i> 글쓰기
@@ -100,6 +100,14 @@ include "partial/nav.php";
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+   <script>
+       function notLogin() {
+           alert("로그인을 하십시오");
+           location.replace('index.php')
+       }
+
+   </script>
+
     <?php
     include "partial/foot.php"
     ?>

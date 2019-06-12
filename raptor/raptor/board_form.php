@@ -37,14 +37,14 @@ include "partial/nav.php";
                     <div class="col-lg-12">
                         <div class="box box-primary">
                             <div class="card box-header with-border">
-                                <h3 class="card-body box-title">글제목 : <? echo $row[title] ?></h3>
+                                <h3 class="card-body box-title float-left">글제목 : <? echo $row[title] ?></h3>
                                 <div class="user-block">
                                 <span class="username">
                                 <a href="#"><? echo $row[author] ?></a>
                             </span>
                                     <span class="description"><? echo $row[date] ?></span>
                             </div>
-                            <div class="box-body" style="height: 700px;">
+                            <div class="box-body box-title float-left" style="height: 300px;">
                                 <? echo $row[content] ?>
                             </div>
                             <div class="box-footer>">
@@ -55,12 +55,12 @@ include "partial/nav.php";
                                 <form role="form" method="post">
                                     <input type="hidden" name="articleNo" value="<? echo $row[board_id] ?>">
                                 </form>
-                                <button type="submit" class="btn btn-primary listBtn " onclick="location.href = 'board_list.php'"><i
-                                            class="fa fa-list"></i> 목록
+                                <button type="submit" class="btn btn-primary listBtn float-left" onclick="location.href = 'board_list.php'"><i
+                                            class="fa fa-list "></i> 목록
                                 </button>
                                 <div class="pull-right">
-                                    <button type="submit" class="btn btn-warning modBtn" onclick="location.href = 'board_modify.php'"><i class="fa fa-edit"></i> 수정</button>
-                                    <button type="submit" class="btn btn-warning delBtn" onclick="location.href = 'board_list.php'"><i class="fa fa-trash"></i> 삭제</button>
+                                    <button type="submit" class="btn btn-warning modBtn float-right" onclick="location.href = 'board_modify.php?board_id=<? echo $row[board_id]?>'"><i class="fa fa-edit"></i> 수정</button>
+                                    <button type="submit" class="btn btn-warning delBtn float-right" onclick="location.href = 'function/delete_board.php?board_id=<? echo $row[board_id]?>'"><i class="fa fa-trash"></i> 삭제</button>
                                 </div>
                             </div>
                         </div>
